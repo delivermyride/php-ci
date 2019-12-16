@@ -17,11 +17,7 @@ RUN sudo pecl install -o -f redis \
     &&  sudo rm -rf /tmp/pear \
     &&  sudo docker-php-ext-enable redis
 
-RUN sudo docker-php-ext-configure gd \
-        --enable-gd-native-ttf \
-        --with-jpeg-dir=/usr/lib \
-        --with-freetype-dir=/usr/include/freetype2 && \
-     sudo docker-php-ext-install gd
+RUN sudo docker-php-ext-configure gd && sudo docker-php-ext-install gd
 
 RUN sudo docker-php-ext-install pdo pdo_mysql opcache pcntl
 
