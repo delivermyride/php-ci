@@ -25,6 +25,8 @@ RUN sudo docker-php-ext-configure gd \
 
 RUN sudo docker-php-ext-install pdo pdo_mysql opcache pcntl
 
+RUN sudo docker-php-ext-install bcmath
+
 ###########################################################################
 # Composer
 ###########################################################################
